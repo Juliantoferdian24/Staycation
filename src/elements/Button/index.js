@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
@@ -57,7 +56,15 @@ export default function Button(props) {
       );
     }
   }
-  return <div></div>;
+  return (
+    <button
+      className={className.join(" ")}
+      style={props.style}
+      onClick={onClick}
+    >
+      {props.children}
+    </button>
+  );
 }
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
@@ -66,6 +73,7 @@ Button.propTypes = {
   target: propTypes.string,
   className: propTypes.string,
   isExternal: propTypes.bool,
+  isPrimary: propTypes.bool,
   isDisabled: propTypes.bool,
   isLoading: propTypes.bool,
   isSmall: propTypes.bool,
