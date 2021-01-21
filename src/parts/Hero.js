@@ -8,10 +8,11 @@ import IconTreasure from "assets/images/icons/icon_treasure.svg";
 
 import Button from "elements/Button";
 import formatNumber from "utils/formatNumber";
+
 export default function hero(props) {
   function showMostPicked() {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop - 30,
+      top: props.refMostPicked.current.offsetTop - 50,
       behavior: "smooth",
     });
   }
@@ -33,8 +34,8 @@ export default function hero(props) {
           </p>
           <Button
             className="btn px-5"
-            hasShadow
             isPrimary
+            hasShadow
             onClick={showMostPicked}
           >
             Show Me Now
@@ -49,7 +50,9 @@ export default function hero(props) {
               />
               <h6 className="mt-3">
                 {formatNumber(props.data.travelers)}{" "}
-                <span class="text-gray-500 font-weight-light">travelers</span>
+                <span className="text-gray-500 font-weight-light">
+                  travelers
+                </span>
               </h6>
             </div>
             <div className="col-auto" style={{ marginRight: 35 }}>
@@ -61,7 +64,9 @@ export default function hero(props) {
               />
               <h6 className="mt-3">
                 {formatNumber(props.data.treasures)}{" "}
-                <span class="text-gray-500 font-weight-light">treasures</span>
+                <span className="text-gray-500 font-weight-light">
+                  treasures
+                </span>
               </h6>
             </div>
             <div className="col-auto" style={{ marginRight: 35 }}>
@@ -73,7 +78,7 @@ export default function hero(props) {
               />
               <h6 className="mt-3">
                 {formatNumber(props.data.cities)}{" "}
-                <span class="text-gray-500 font-weight-light">cities</span>
+                <span className="text-gray-500 font-weight-light">cities</span>
               </h6>
             </div>
           </div>
