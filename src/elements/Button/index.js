@@ -34,15 +34,16 @@ export default function Button(props) {
   if (props.type === "link") {
     if (props.isExternal) {
       return (
-        <a
+        <button
           href={props.href}
           className={className.join(" ")}
           style={props.style}
           target={props.target === "_blank" ? "_blank" : undefined}
-          rel="noopener noreferrer"
+          rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
+          onClick={onClick}
         >
           {props.children}
-        </a>
+        </button>
       );
     } else {
       return (

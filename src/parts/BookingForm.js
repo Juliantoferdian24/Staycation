@@ -104,6 +104,7 @@ export default class BookingForm extends Component {
 
         <Button
           className="btn"
+          type="link"
           hasShadow
           isPrimary
           isBlock
